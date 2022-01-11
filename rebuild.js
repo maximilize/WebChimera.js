@@ -49,4 +49,8 @@ function begin() {
     }
 };
 
-begin();
+if (process.env.SKIP_WEBCHIMERA_INSTALL) {
+    console.log("Skipping install script of WebChimera.js");
+} else {
+    begin();
+}
